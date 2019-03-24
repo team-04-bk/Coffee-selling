@@ -1,0 +1,67 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: #a9a987;
+    
+	font-family: Arial, "Time New Roman" , sans-serif;
+    font-size: 16px;
+}
+
+#wrap{
+    background-color: #ffffff;
+    width: 960px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    
+}
+
+#myheader{
+    background-image: url(../css/headerbgr.jpg);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 1px solid #000;
+}
+
+h3 {
+    color: #fff;
+    margin-left: 30px;
+}
+#innerwrap{
+    background-image: url(../css/userbgr.jpg);
+}
+
+#innerwrap:after{
+    content:"";
+    display:block;
+    clear:both;
+    height: 0px;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+#sidebar{
+    float: left;
+    width: 300px;
+}
+
+#main{
+    float: left;
+    width: 600px;
+    border-left: 2px solid #000
+}
+
+#avatar img{
+    height: 120px;
+    width: 120px;
+    border: 1px solid #000;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#chamcong {
+    margin: 20px
+}
