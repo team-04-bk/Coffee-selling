@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 16, 2019 at 07:54 AM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Host: localhost
+-- Generation Time: Mar 19, 2019 at 11:30 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -73,6 +73,27 @@ INSERT INTO `danh_muc` (`maDanhMuc`, `tenDanhMuc`) VALUES
 (2, 'Coffee 2'),
 (3, 'Coffee 3');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `khach_hang`
+--
+
+CREATE TABLE `khach_hang` (
+  `ma_khach_hang` int(11) NOT NULL,
+  `ten_tai_khoan` varchar(200) DEFAULT NULL,
+  `mat_khau` varchar(200) DEFAULT NULL,
+  `ten_khach_hang` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `khach_hang`
+--
+
+INSERT INTO `khach_hang` (`ma_khach_hang`, `ten_tai_khoan`, `mat_khau`, `ten_khach_hang`) VALUES
+(1, 'vtlam107', 'vtlam107', 'Lâm'),
+(2, 'lam123', 'lam123', 'Lam Lam Lam');
+
 --
 -- Indexes for dumped tables
 --
@@ -91,6 +112,13 @@ ALTER TABLE `danh_muc`
   ADD PRIMARY KEY (`maDanhMuc`);
 
 --
+-- Indexes for table `khach_hang`
+--
+ALTER TABLE `khach_hang`
+  ADD PRIMARY KEY (`ma_khach_hang`),
+  ADD UNIQUE KEY `ten_tai_khoan` (`ten_tai_khoan`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -105,6 +133,12 @@ ALTER TABLE `ca_phe`
 --
 ALTER TABLE `danh_muc`
   MODIFY `maDanhMuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `khach_hang`
+--
+ALTER TABLE `khach_hang`
+  MODIFY `ma_khach_hang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
