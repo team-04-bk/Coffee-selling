@@ -1,0 +1,58 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+    
+	font-family: Arial;
+    font-size: 16px;
+}
+
+#wrap{
+    background-color: #ffffff;
+    width: 960px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    
+}
+
+#myheader{
+    background-image: url(../css/headerbgr.jpg);
+    height: 200px;
+    width: 960px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#innerwrap{
+    background-image: url(../css/userbgr.jpg);
+}
+
+#innerwrap:after{
+    content:"";
+    display:block;
+    clear:both;
+    height: 0px;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+#sidebar{
+    float: left;
+    width: 300px;
+    border: #000 solid 1px;
+}
+
+#main{
+    float: left;
+    width: 600px;
+    border: #000 solid 1px;
+}
+
+#avatar img{
+    height: 150px;
+    width: 150px;
+    border: 1px solid #000;
+}
