@@ -9,7 +9,8 @@
     <meta charset="utf-8" />
     <title>Coffe</title>
     <link href="../css/Style.css" rel="stylesheet" />
-    <link href="../fontawesome-free-5.6.3-web/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header>
@@ -25,10 +26,10 @@
             <nav>
 
                 <ul>
-                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="index.php">Trang chủ</a></li>
                     <li><a href="Products.php">Sản phẩm</a></li>
-                    <li><a href="#">Chi nhánh</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="ShopCart.php">Giỏ hàng</a></li>
+                    <li><a href="About.php">Giới thiệu</a></li>
                     <li>
                         <?php  
                             if ( isset($_SESSION['ma_khach_hang'])) {
@@ -95,12 +96,31 @@
     </section>
 
     <footer>
-        <h2>Chào mừng</h2>
+        
+            <div class="row">
+                <div class="col">
+                    <img src="../Image/LogoSample_ByTailorBrands.jpg" />
+                </div>
 
-        <div>
 
-            <h4>Địa chỉ:1 HBT-HN</h4>
-        </div>
+                <div class="col">
+                    <h3>HỖ TRỢ</h3>
+                    <h4>Số điện thoại:0123456789</h4>
+                </div>
+
+
+                <div class="col">
+                    <h3>ĐỊA CHỈ</h3>
+                    <h4>17 Giải Phóng, Hai Bà Trưng, Hà Nội</h4>
+                    <h4>95 Cao Thắng, Quận 3, Hồ Chí Minh</h4>
+
+                    <h4>hello@demo.com</h4>
+                </div>
+
+            </div>
+
+            <div class="coppy-right">Copyright © 2019 . All rights reserved.</div>
+        
     </footer>
     <?php 
         mysqli_close($con);
