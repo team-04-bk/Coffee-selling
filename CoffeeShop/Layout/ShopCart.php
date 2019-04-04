@@ -33,8 +33,7 @@
                     <li><a href="Products.php">Sản phẩm</a></li>
                     <li><a href="ShopCart.php">Giỏ hàng</a></li>
                     <li><a href="About.php">Giới thiệu</a></li>
-                    <li><a href="signup">Đăng ký</a></li>
-                    <li><a href="login">Đăng nhập</a></li>
+                    
                     <li>
                         <?php  
                             if ( isset($_SESSION['ma_khach_hang'])) {
