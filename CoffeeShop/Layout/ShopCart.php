@@ -11,7 +11,8 @@
     <meta charset="utf-8" />
     <title>Coffe</title>
     <link href="../css/Style.css" rel="stylesheet" />
-    <link href="../fontawesome-free-5.6.3-web/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
