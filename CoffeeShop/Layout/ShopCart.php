@@ -28,10 +28,12 @@
             <nav>
 
                 <ul>
-                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="index.php">Trang chủ</a></li>
                     <li><a href="Products.php">Sản phẩm</a></li>
-                    <li><a href="#">Chi nhánh</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="ShopCart.php">Giỏ hàng</a></li>
+                    <li><a href="About.php">Giới thiệu</a></li>
+                    <li><a href="signup">Đăng ký</a></li>
+                    <li><a href="login">Đăng nhập</a></li>
                     <li>
                         <?php  
                             if ( isset($_SESSION['ma_khach_hang'])) {
@@ -143,13 +145,33 @@
     <br />
     <br />
     <br />
+    <br />
     <footer>
-        <h2>Chào mừng</h2>
+        
+            <div class="row">
+                <div class="col">
+                    <img src="../Image/LogoSample_ByTailorBrands.jpg" />
+                </div>
 
-        <div>
+
+                <div class="col">
+                    <h3>HỖ TRỢ</h3>
+                    <h4>Số điện thoại:0123456789</h4>
+                </div>
+
+
+                <div class="col">
+                    <h3>ĐỊA CHỈ</h3>
+                    <h4>17 Giải Phóng, Hai Bà Trưng, Hà Nội</h4>
+                    <h4>95 Cao Thắng, Quận 3, Hồ Chí Minh</h4>
+
+                    <h4>hello@demo.com</h4>
+                </div>
+
+            </div>
             
-            <h4>Địa chỉ:1 HBT-HN</h4>
-        </div>
+            <div class="coppy-right">Copyright © 2019 . All rights reserved.</div>
+        
     </footer>
     <?php 
         mysqli_close($con);
