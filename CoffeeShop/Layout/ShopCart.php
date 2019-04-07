@@ -39,6 +39,7 @@
                             if ( isset($_SESSION['ma_khach_hang'])) {
                                 ?>
                                     <a href="logout.php">Đăng xuất</a>
+                                    <a href="userinfo.html">Thông tin</a>               
                                 <?php
                             }
                             else {
