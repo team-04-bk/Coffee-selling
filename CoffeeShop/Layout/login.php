@@ -31,8 +31,9 @@
 			<input type="password" placeholder="password" name="password" id="password"><br>
 				<label id="errPassword" class="cyellow bold"></label>
 			<br>
-			<input type="button" value="Login" onclick="validate()">
-			<input type="button" value="Sign up">
+			<input type="button" value="Confirm" onclick="validate()">
+			<div class="confirm-1"><a href="signup.php"><input type="button" value="Signup" /></a></div>
+			<div class="confirm-1"><a href="index.php"><input type="button" value="Hủy" /></a></div>
 		</form>
 	</div>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

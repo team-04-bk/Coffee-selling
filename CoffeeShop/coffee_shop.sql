@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Mar 19, 2019 at 11:30 AM
+-- Host: 127.0.0.1
+-- Generation Time: Apr 07, 2019 at 05:07 PM
 -- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- PHP Version: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -83,16 +83,21 @@ CREATE TABLE `khach_hang` (
   `ma_khach_hang` int(11) NOT NULL,
   `ten_tai_khoan` varchar(200) DEFAULT NULL,
   `mat_khau` varchar(200) DEFAULT NULL,
-  `ten_khach_hang` varchar(200) DEFAULT NULL
+  `ten_khach_hang` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `ngay_sinh` varchar(100) NOT NULL,
+  `gioi_tinh` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `dia_chi` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `khach_hang`
 --
 
-INSERT INTO `khach_hang` (`ma_khach_hang`, `ten_tai_khoan`, `mat_khau`, `ten_khach_hang`) VALUES
-(1, 'vtlam107', 'vtlam107', 'Lâm'),
-(2, 'lam123', 'lam123', 'Lam Lam Lam');
+INSERT INTO `khach_hang` (`ma_khach_hang`, `ten_tai_khoan`, `mat_khau`, `ten_khach_hang`, `ngay_sinh`, `gioi_tinh`, `email`, `phone`, `dia_chi`) VALUES
+(1, 'vtlam107', '3', 'Lâm thồn', '', '', '', '', ''),
+(2, 'lam123', 'lam123', 'Lam Lam Lam', '', '', '0', '0', '0');
 
 --
 -- Indexes for dumped tables
