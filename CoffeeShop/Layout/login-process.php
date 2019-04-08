@@ -16,6 +16,11 @@
 				$_SESSION['ma_khach_hang'] = $KH['ma_khach_hang'];
 				$_SESSION['ten_tai_khoan'] = $KH['ten_tai_khoan'];
 				$_SESSION['ten_khach_hang'] = $KH['ten_khach_hang'];
+				$_SESSION['ngay_sinh'] = $KH['ngay_sinh'];
+				$_SESSION['gioi_tinh'] = $KH['gioi_tinh'];
+				$_SESSION['email'] = $KH['email'];
+				$_SESSION['phone'] = $KH['phone'];
+				$_SESSION['dia_chi'] = $KH['dia_chi'];
 			}
 			mysqli_close($con);
 			header('location: Products.php');

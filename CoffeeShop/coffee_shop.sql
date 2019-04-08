@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 07, 2019 at 05:07 PM
+-- Host: localhost
+-- Generation Time: Apr 08, 2019 at 02:50 AM
 -- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -84,7 +84,7 @@ CREATE TABLE `khach_hang` (
   `ten_tai_khoan` varchar(200) DEFAULT NULL,
   `mat_khau` varchar(200) DEFAULT NULL,
   `ten_khach_hang` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
-  `ngay_sinh` varchar(100) NOT NULL,
+  `ngay_sinh` date NOT NULL,
   `gioi_tinh` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(100) NOT NULL,
@@ -96,8 +96,8 @@ CREATE TABLE `khach_hang` (
 --
 
 INSERT INTO `khach_hang` (`ma_khach_hang`, `ten_tai_khoan`, `mat_khau`, `ten_khach_hang`, `ngay_sinh`, `gioi_tinh`, `email`, `phone`, `dia_chi`) VALUES
-(1, 'vtlam107', '3', 'Lâm thồn', '', '', '', '', ''),
-(2, 'lam123', 'lam123', 'Lam Lam Lam', '', '', '0', '0', '0');
+(1, 'vtlam107', '3', 'Lâm thồn', '2000-01-01', '1', 'vtlam@lam.com', '123', 'abc'),
+(2, 'lam123', 'lam123', 'Lam Lam Lam', '2000-03-03', '1', 'lam123@lam.com', '456', 'def');
 
 --
 -- Indexes for dumped tables
@@ -121,7 +121,7 @@ ALTER TABLE `danh_muc`
 --
 ALTER TABLE `khach_hang`
   ADD PRIMARY KEY (`ma_khach_hang`),
-  ADD UNIQUE KEY `ten_tai_khoan` (`ten_tai_khoan`);
+  ADD UNIQUE KEY `ma_khach_hang` (`ma_khach_hang`);
 
 --
 -- AUTO_INCREMENT for dumped tables

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    require_once('connectDB.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,34 +31,32 @@
                     <li><a href="ShopCart.php">Giỏ hàng</a></li>
                     <li><a href="About.php">Giới thiệu</a></li>
                     <li><a href="logout.php">Đăng xuất</a></li>
-                    <li><a href="userinfo.html">Thông tin</a></li>
+                    <li><a href="userinfo.php">Thông tin</a></li>
                     <li><a href="edit-user-info.php">Chỉnh sửa</a></li>
                         
     <div id="wrap">
         <div class="container">
             <div id="myheader" class="col-md-12">
                 <div id="avatar">
-                    <img src="css/avatar.jpg" alt="avatar">
-                    <h3>User name</h3>
+                    <img src="../css/avatar.jpg" alt="avatar">
+                    <h3>
+                        <?php echo $_SESSION['ten_khach_hang'] ?>
+                    </h3>
                 </div>
             </div>
             <div id="innerwrap">
                 <div id="sidebar">
-                            
                     <div id="navibar">
                         <ul>
-                            <li>Số điện thoại: </li>
-                            <li>Năm sinh: </li>
-                            <li>Nơi ở hiện tại: </li>
-                            <li>Email: </li>
-                            
+                            <li>Số điện thoại: <?php echo $_SESSION['phone'] ?></li>
+                            <li>Năm sinh: <?php echo $_SESSION['ngay_sinh'] ?></li>
+                            <li>Nơi ở hiện tại: <?php echo $_SESSION['dia_chi'] ?></li>
+                            <li>Email: <?php echo $_SESSION['email'] ?></li>                            
                         </ul>
                     </div>
                 </div> 
             </div>
         </div>
-        
-        
     </div>
 
 </body>
