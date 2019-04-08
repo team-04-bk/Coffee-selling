@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="top-bar">
-            <a href="index.html" class="logo"><img src="../Image/LogoSample_ByTailorBrands.jpg" /></a>
+            <a href="index.php" class="logo"><img src="../Image/LogoSample_ByTailorBrands.jpg" /></a>
             <div class="search-box">
                 <input class="search-txt" type="text" placeholder="Tìm sản phẩm" />
                 <a class="search-btn" style="text-decoration:none;" href="#"><i class="fas fa-search fa-lg"></i></a>
@@ -28,11 +28,12 @@
             <nav>
 
                 <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="Products.html">Sản phẩm</a></li>
-                    <li><a href="ShopCart.html">Giỏ hàng</a></li>
-                    <li><a href="About.html">Giới thiệu</a></li>
-                    
+                    <li><a href="index.php">Trang chủ</a></li>
+                    <li><a href="Products.php">Sản phẩm</a></li>
+                    <li><a href="ShopCart.php">Giỏ hàng</a></li>
+                    <li><a href="About.php">Giới thiệu</a></li>
+                    <li><a href="userinfo.php">Thông tin</a></li>
+
                     <li>
                         <?php  
                             if ( isset($_SESSION['ma_khach_hang'])) {

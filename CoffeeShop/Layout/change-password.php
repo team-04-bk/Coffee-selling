@@ -33,6 +33,9 @@
                     <li><a href="Products.html">Sản phẩm</a></li>
                     <li><a href="ShopCart.html">Giỏ hàng</a></li>
                     <li><a href="About.html">Giới thiệu</a></li>
+                    <li><a href="userinfo.php">Thông tin</a></li>
+                    
+
                     
                     <li>
                         <?php  

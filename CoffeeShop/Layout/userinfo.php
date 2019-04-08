@@ -31,7 +31,6 @@
                     <li><a href="ShopCart.php">Giỏ hàng</a></li>
                     <li><a href="About.php">Giới thiệu</a></li>
                     <li><a href="logout.php">Đăng xuất</a></li>
-                    <li><a href="userinfo.php">Thông tin</a></li>
                     <li><a href="edit-user-info.php">Chỉnh sửa</a></li>
                         
     <div id="wrap">
