@@ -31,7 +31,7 @@
 				}
 				else {
 					mysqli_close($con);
-					header('location: edit-user-info.php');
+					header('location: edit-user-info.php?err=200');
 				}
 			}
 		}

@@ -3,9 +3,6 @@
 	if (isset($_GET['err'])){
 		$ret = $_GET['err'];
 	}
-	else{
-		$ret = 0;
-	}
 	#var_dump($ret);die;
 ?>
 	
@@ -61,33 +58,68 @@
         <div class="row-edit">
             <div class="row-left">Nhập mật khẩu hiện tại</div>
             <div class="row-right">
-                <input type="password" name = "oldpass" id = "old" placeholder="Nhập mật khẩu hiện tại"><br>
-				<label id="errOld" class="cyellow bold"></label>
-				<br>
+                <input type="password" name = "oldpass" id = "old" placeholder="Nhập mật khẩu hiện tại">
             </div>
         </div>
         <div class="row-edit">
             <div class="row-left">Nhập mật khẩu mới</div>
             <div class="row-right">
-                <input type="password" name = "newpass" id = "new" placeholder="Nhập mật khẩu mới"><br>
-				<label id="errNew" class="cyellow bold"></label>
-				<br>
+                <input type="password" name = "newpass" id = "new" placeholder="Nhập mật khẩu mới">
             </div>
         </div>
         <div class="row-edit">
             <div class="row-left">Nhập lại mật khẩu mới</div>
             <div class="row-right">
                 <input type="password" name = "renewpass" id = "renew" placeholder="Nhập lại mật khẩu mới"><br>
-				<label id="errRenew" class="cyellow bold"></label>
+				<label id="info" class="cyellow bold"></label>
 				<br>
             </div>
+			
         </div>
+		<?php  
+		if ( isset($ret)) {
+			?>
+			<div class="row-left">
+			</div>
+			<div class="row-right">
+				<?php
+				switch ($ret) {
+					case 500:				
+						?>
+						<label><font color="red"><b>Có lỗi:</b></font> <i>Mật khẩu hiện tại không chính xác</i></label>
+					<?php
+						break;
+					case 403:
+						?>
+						<label><font color="red"><b>Có lỗi:</b></font> <i>Không tìm thấy thông tin người dùng</i></label>
+					<?php
+						break;
+					case 501:
+						?>
+						<label><font color="red"><b>Có lỗi:</b></font> <i>Cập nhật mật khẩu mới không thành công</i></label>
+					<?php
+						break;
+					case 200:
+						?>
+						<label><font color="blue"><b>Thành công:</b></font> <i>Cập nhật mật khẩu mới thành công</i></label>
+					<?php
+						break;
+					default:
+						?>
+						<label><font color="red"><b>Có lỗi:</b></font> <i>Không lấy được thông tin người dùng</i></label>
+				<?php
+				}	
+				?>
+			</div>
+			<?php
+		}
+		?>
+			
         <div class="row-edit">
             <div class="confirm-1"><input type="button" value="Xác nhận" onclick="change_pass()"></div>
         </div>
 	</form>
-	<br>
-	<label id="status" class="cyellow bold"></label>
+	
     </div>
     <footer>
 
@@ -123,34 +155,17 @@
 			
 			var newpass = document.getElementById('new').value;
 			var renewpass = document.getElementById('renew').value;
-			if (oldlen == 0) {
-				document.getElementById('errOld').innerHTML = "Vui lòng điền tên mật khẩu hiện tại";
+			if (oldlen == 0 || newlen == 0 || renewlen == 0) {
+				document.getElementById('info').innerHTML = "<font color=\"red\"><i>Vui lòng điền đầy đủ thông tin</i></font>";
 			}
-			else {
-				document.getElementById('errOld').innerHTML = "";
-			}
-			
-			if(newlen == 0){
-				document.getElementById('errNew').innerHTML = "Vui lòng điền mật khẩu mới";
-			}
-			else {
-				document.getElementById('errNew').innerHTML = "";
-			}
-			
-			if(renewlen == 0){
-				document.getElementById('errRenew').innerHTML = "Vui lòng nhắc lại mật khẩu mới";
-			}
-			else {			
+			else {	
 				if(newpass != renewpass){
-					document.getElementById('errRenew').innerHTML = "Mật khẩu mới không khớp";
+					document.getElementById('info').innerHTML = "Mật khẩu mới không khớp";
 				}
 				else {
-					document.getElementById('errRenew').innerHTML = "";
+					document.getElementById('info').innerHTML = "";
+					document.getElementById('formcp').submit();
 				}
-			}
-			
-			if (oldlen != 0 && newlen != 0 && renewlen != 0 && newpass == renewpass) {
-				document.getElementById('formcp').submit();
 			}
 		}
 	

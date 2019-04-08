@@ -33,7 +33,7 @@
 					}
 					else {
 						mysqli_close($con);
-						header('location: change-password.php');
+						header('location: change-password.php?err=200');
 					}
 				}
 			}

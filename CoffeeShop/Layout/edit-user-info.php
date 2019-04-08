@@ -3,9 +3,6 @@
 	if (isset($_GET['err'])){
 		$ret = $_GET['err'];
 	}
-	else{
-		$ret = 0;
-	}
 ?>
 
 <!DOCTYPE html>
@@ -94,8 +91,44 @@
                 <input type="address" name = "add" id = "idadd" placeholder="Nhập địa chỉ" />
             </div>
         </div>
-		<br>
-			<label id="errMess" class="cyellow bold"></label>
+		
+		<?php  
+		if ( isset($ret)) {
+			?>
+			
+        <div class="row-edit">
+			<div class="row-left">
+			</div>
+			<div class="row-right">
+				<?php
+				switch ($ret) {
+					case 500:				
+						?>
+						<label><font color="red"><b>Có lỗi:</b></font> <i>Cập nhật thông tin người dùng không thành công</i></label>
+					<?php
+						break;
+					case 403:
+						?>
+						<label><font color="red"><b>Có lỗi:</b></font> <i>Không tìm thấy thông tin người dùng</i></label>
+					<?php
+						break;
+					case 200:
+						?>
+						<label><font color="blue"><b>Thành công:</b></font> <i>Cập nhật thông tin người dùng thành công</i></label>
+					<?php
+						break;
+					default:
+						?>
+						<label><font color="red"><b>Có lỗi:</b></font> <i>Không lấy được thông tin người dùng</i></label>
+				<?php
+				}	
+				?>
+			</div>
+			<?php
+		}
+		?>
+		</div>
+		
         <div class="row-edit">
             <div class="confirm-1"><input type="button" value="Cập nhật" onclick="edit_info()"></div>
         </div>
@@ -103,6 +136,7 @@
         <div class="row-edit">
             <div class="confirm-1"><a href="change-password.php"><input type="submit" value="Đổi mật khẩu" /></a></div>
         </div>
+		
     </div>
 		
 	<script type="text/javascript">
