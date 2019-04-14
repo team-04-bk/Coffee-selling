@@ -31,6 +31,12 @@
 				}
 				else {
 					mysqli_close($con);
+					$_SESSION['ten_khach_hang'] = $name;
+					$_SESSION['ngay_sinh'] = $birth;
+					$_SESSION['gioi_tinh'] = $sex;
+					$_SESSION['email'] = $mail;
+					$_SESSION['phone'] = $phone;
+					$_SESSION['dia_chi'] = $add;
 					header('location: edit-user-info.php?err=200');
 				}
 			}

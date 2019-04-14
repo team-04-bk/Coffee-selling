@@ -128,7 +128,7 @@
                                     <button type="submit">
                                         Cập nhật giỏ hàng
                                     </button>
-                                    <a href="#">Xác nhận</a>
+                                    <a href="checkout.php">Xác nhận</a>
                                 </div>
                             </form>
                             <?php
