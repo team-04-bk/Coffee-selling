@@ -23,7 +23,12 @@
 				$_SESSION['dia_chi'] = $KH['dia_chi'];
 			}
 			mysqli_close($con);
-			header('location: Products.php');
+			if($username == 'lam123') {
+				header('location: list-employees.php');
+			}
+			else {
+				header('location: Products.php');
+			}
 		}
 	}
 	else {
