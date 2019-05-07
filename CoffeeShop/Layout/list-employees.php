@@ -13,20 +13,16 @@
 </head>
 <body>
     <header>
-        <div class="admin-top-bar">
+        <div class="top-bar">
             <div class="nav">
                 <a href="#" class="logo"><img src="../Image/LogoSample_ByTailorBrands.jpg" /></a>
-                <div class="search-box">
-                    <input class="search-txt" type="text" placeholder="Tìm kiếm..." />
-                    <a class="search-btn" style="text-decoration:none;" href="#"><i class="fas fa-search fa-lg"></i></a>
-                </div>
+                
 
                 <nav>
 
                     <ul>
-                        <li><a href="user-info.php">Danh sách khách hàng</a></li>
-                        <li><a href="list-employees.php">Danh sách nhân viên</a></li>
-                        <li><a href="list-products.php">Danh sách sản phẩm</a></li>
+                    <li><a href="logout.php">Đăng xuất</a></li>
+
 
                     </ul>
                 </nav>
@@ -74,7 +70,7 @@
                                 </td>
                                 <td>
                                     <span>
-                                        <?= $nhan_vien['chuc_vu']==1? "Nhân viên":"Tạp vụ" ?>
+                                        <?= $nhan_vien['chuc_vu'] ?>
                                     </span>
                                 </td>
                                 <td style="padding:0 15px 0 15px;">

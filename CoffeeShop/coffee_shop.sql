@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 08, 2019 at 02:50 AM
+-- Host: 127.0.0.1
+-- Generation Time: May 07, 2019 at 08:46 AM
 -- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -97,7 +97,32 @@ CREATE TABLE `khach_hang` (
 
 INSERT INTO `khach_hang` (`ma_khach_hang`, `ten_tai_khoan`, `mat_khau`, `ten_khach_hang`, `ngay_sinh`, `gioi_tinh`, `email`, `phone`, `dia_chi`) VALUES
 (1, 'vtlam107', '3', 'Lâm thồn', '2000-01-01', '1', 'vtlam@lam.com', '123', 'abc'),
-(2, 'lam123', 'lam123', 'Lam Lam Lam', '2000-03-03', '1', 'lam123@lam.com', '456', 'def');
+(2, 'lam123', 'lam123', 'Lam Lam Lam', '2000-03-03', '1', 'khueuns@gmail.com', '456', 'def'),
+(3, 'phamquangkhue', 'thereaper1998kh', 'Phạm Quang Khuê', '1998-04-29', 'Nam', 'khueuns@gmail.com', '0974437079', '123456'),
+(4, '123456', '123456', 'Khue', '0000-00-00', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nhan_vien`
+--
+
+CREATE TABLE `nhan_vien` (
+  `ma_nhan_vien` int(11) DEFAULT NULL,
+  `ten_nhan_vien` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `chuc_vu` varchar(200) DEFAULT NULL,
+  `so_dien_thoai` varchar(100) DEFAULT NULL,
+  `so_tien_moi_cong` varchar(100) NOT NULL,
+  `so_cong` varchar(100) NOT NULL,
+  `tien_luong` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `khach_hang`
+--
+
+INSERT INTO `nhan_vien` (`ma_nhan_vien`, `ten_nhan_vien`, `chuc_vu`, `so_dien_thoai`, `so_tien_moi_cong`, `so_cong`, `tien_luong`) VALUES
+
 
 --
 -- Indexes for dumped tables
@@ -124,6 +149,13 @@ ALTER TABLE `khach_hang`
   ADD UNIQUE KEY `ma_khach_hang` (`ma_khach_hang`);
 
 --
+-- Indexes for table `nhan_vien`
+--
+ALTER TABLE `nhan_vien`
+  ADD PRIMARY KEY (`ma_nhan_vien`),
+  ADD UNIQUE KEY `ma_nhan_vien` (`ma_nhan_vien`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -143,7 +175,13 @@ ALTER TABLE `danh_muc`
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `ma_khach_hang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ma_khach_hang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `nhan_vien`
+--
+ALTER TABLE `nhan_vien`
+  MODIFY `ma_nhan_vien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

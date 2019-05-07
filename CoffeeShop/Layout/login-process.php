@@ -23,7 +23,7 @@
 				$_SESSION['dia_chi'] = $KH['dia_chi'];
 			}
 			mysqli_close($con);
-			if($username == 'lam123') {
+			if($username == 'phamquangkhue') {
 				header('location: list-employees.php');
 			}
 			else {
